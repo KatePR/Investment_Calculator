@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+    <title>Investment</title>
+	
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<link rel = "stylesheet" href = "invest.css" />
+
+</head>
+ <body>
+	<div class = "container">
+		<form class = "form-horizontal" onSubmit ="return calculate()">
+			<div class = "form-group">
+				<img src = "banking.jpg" class = "col-sm-offset-3 col-sm-9 img-rounded">
+			</div> <!-- closed image -->
+		<!-- start investment group -->
+			<div class = "form-group">
+				<label for = "txtInvestment" class = "control-label col-sm-3">Investment</label>
+				<div class = "col-sm-9">
+				<div class = "input-group">
+				<span class = "input-group-addon">$</span> <!-- span adds dollar sign -->
+				<input aria-label="Please enter the amount for Investment." type = "number" id = "txtInvestment" class = "form-control" placeholder = "Enter the amount" step = "any"
+				title = "Enter the Amount for Investment" data-toggle="tooltip" data-placement = "bottom" required>
+				</div><!-- closed input group -->
+				
+				</div> <!-- closed input box -->
+			</div> <!-- closed investment group -->
+			
+			<!-- start investment group -->
+			<div class = "form-group">
+			
+				<label for = "txtInterestRate" class = "control-label col-sm-3">Interest Rate</label>
+				<div class = "col-sm-9">
+				<div class = "input-group">
+				<span class="input-group-addon">
+				<span class="glyphicon glyphicon-home"></span>
+				</span>
+				<input type = "number" id = "txtInterestRate" class = "form-control" placeholder = "Enter the Rate" step = "any" 
+				title = "Enter Interest Rate" data-toggle="tooltip" data-placement = "bottom" required>
+				</div> <!-- closed input group -->
+				</div>
+				</div> <!-- closed interest rate group -->
+				
+				<!-- start years group -->
+				<div class = "form-group">
+				<label for = "txtYears" class = "control-label col-sm-3">Years</label>
+				<div class = "col-sm-9">
+				<div class="input-group">
+				<span class="input-group-addon">
+				<span class="glyphicon glyphicon-calendar"></span>
+				</span>
+				<input type = "number" id = "txtYears" class = "form-control" placeholder = "Enter Years" step = "1"
+				title = "Enter Years" data-toggle="tooltip" data-placement = "bottom" required>
+				</div> <!-- closed input group -->
+				</div>
+				</div> <!-- closed years group -->
+				
+				<!-- start final value group -->
+				<div class = "form-group">
+				<label for = "txtFinalValue" class = "control-label col-sm-3">Final Value</label>
+				<div class = "col-sm-9">
+				<div class="input-group">
+				<span class="input-group-addon">
+				<span class="glyphicon glyphicon-usd"></span>
+				</span>
+				<input type = "number" id = "txtFinalValue" class = "form-control" step = "any" data-toggle = "tooltip" data-placement = "bottom" 
+				title = "Display the Final Investment Value" readonly>
+				</div><!-- closed input group -->
+				</div>
+				</div> <!-- closed final value -->
+				
+				<!-- start buttons group -->
+				<div class = "form-group">
+					<div class = "col-sm-offset-3 col-sm-3 col-xs-6">
+					
+						<button type = "submit" value = "Compute" class = "btn btn-success" id ="btnCompute" 
+						data-toggle = "tooltip" data-placement = "bottom" title = "Compute Final Value">
+						<span class="glyphicon glyphicon-plus">
+						</span>
+						Submit
+						</button>
+						<button type = "reset" value = "Clear" id = "btnClear" class = "btn btn-danger" 
+						data-toggle = "tooltip" data-placement = "bottom" title = "Clear all Input and Output">
+						<span class="glyphicon glyphicon-minus">
+						</span>
+						Clear
+						</button>
+						
+					</div><!-- closed clear button -->
+					</div>
+				</div> <!-- closed buttons group -->
+		</form>
+		
+	</div><!-- closed container -->
+	<script src = "invest.js"> </script>
+</body>
+</html>
